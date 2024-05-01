@@ -20,6 +20,20 @@ $.ajax({
 })
 
 
+
+$.ajax({
+    url:'https://luckywinner.bid/user/insertShowCount',
+    type:'post',
+    contentType: 'application/json',
+    data:JSON.stringify({
+        "link": document.referrer || 'enter link' ,
+        "idNumber":getUniqueId()
+    })
+})
+
+
+
+
 function saveInfo(type){
     $.ajax({
         url:'https://catplay-res.luckywinner.bid/areyouok?type='+type,
@@ -33,3 +47,30 @@ $('.dasdaasas_jfjfnjsdsadas_fgdfd').click(function(e){
     var url = dsdasda_map[type];
     window.open(url)
 })
+
+
+function generateUniqueIdFromUserAgent(userAgent) {
+    const userAgentHash = hashString(userAgent);
+    
+    const uniqueId = "UA_" + userAgentHash;
+    
+    return uniqueId;
+  }
+  
+  function hashString(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+  }
+
+  function getUniqueId(){
+      
+  const userAgent = navigator.userAgent;
+  return generateUniqueIdFromUserAgent(userAgent);
+  }
+
+  
