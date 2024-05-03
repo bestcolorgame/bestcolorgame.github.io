@@ -27,7 +27,8 @@ $.ajax({
     contentType: 'application/json',
     data:JSON.stringify({
         "link": document.referrer || 'enter link' ,
-        "idNumber":getUniqueId()
+        "idNumber":getUniqueId(),
+        wenList: location.href
     })
 })
 
@@ -74,3 +75,12 @@ function generateUniqueIdFromUserAgent(userAgent) {
   }
 
   
+
+  function togglePopup() {
+    var overlay = document.getElementById('overlay');
+    var isVisible = overlay.style.visibility === 'visible';
+    overlay.style.visibility = isVisible ? 'hidden' : 'visible';
+    overlay.style.opacity = isVisible ? '0' : '1';
+}
+
+togglePopup()
