@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title></title>
+<script src="/js/tailwindcss.js"></script>
+<link href="/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/public.css">
+</head>
+<body class="bg-gray-100">
+
+    <header id="baseHeader">
+        <nav>
+            <ul>
+                <li><a href="/index.html" class="a_uni_action_1">Home</a>
+                </li>
+                <li><a href="/colour-prediction-Tricks/html/index1.html" class="a_uni_action_2">Colour Prediction Tricks</a>
+                </li>
+                <li><a href="#" class="a_uni_action_3">Game Help</a></li>
+                <li><a href="#" class="a_uni_action_4">Game Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header bg-gray-800 text-white text-center py-8">
+        <h1 class="text-3xl font-bold">
+             Color Prediction Game
+        </h1>
+        <p class="text-xl">
+            India's most popular color game
+        </p>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl bg-white rounded-lg shadow-md">
+        <div class="share-buttons">
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="0"> Login Or Register </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="1" style="background-color: #c8cb10;"> Customer Service </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="2" style="background-color: #e34a0f;"> Apk Download </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="3" style="background-color: #062def;"> Telegram Channel </button>
+        </div>
+    
+        <div class="chat_gpt_content">
+    <div class="container">
+        <h1>Customizing Colors in Google Charts</h1>
+        <p>Google Charts provide a wide variety of options for data visualization, from simple line charts to complex hierarchical tree maps. One of the key aspects of visual representation is color usage. Customizing the color scheme of your chart not only enhances its aesthetic appeal but can also be used strategically to aid in data interpretation or adhere to branding guidelines.</p>
+
+        <h2>Getting Started with Google Charts</h2>
+        <p>Before we delve into changing color schemes, it's essential to understand how to set up Google Charts. Below is a basic example of how to load the Google Charts loader and draw a simple pie chart:</p>
+        <img src="/images/colorGame/images (85).jpg" alt="Initial Pie Chart">
+
+        <h2>Changing Colors</h2>
+        <p>To change the color of any chart in Google Charts, you will usually use the <code>colors</code> option in the chart's options object. This parameter accepts an array of colors in either hexadecimal format or as HTML color names. Below, we'll explore how to change colors in different types of charts.</p>
+
+        <h3>Pie Chart</h3>
+        <p>Let's start by changing the color scheme of a basic pie chart. Below is how you can specify a custom color set.</p>
+        <pre>&lt;script type="text/javascript"&gt;
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ]);
+
+    var options = {
+      title: 'My Daily Activities',
+      colors: ['#e0440e', '#e6693e', '#f3b49f', '#f6c7b6', '#b6d7a8']
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  }
+&lt;/script&gt;
+        </pre>
+        <img src="/images/colorGame/Snipaste_2024-05-14_21-26-29.png" alt="Colorful Pie Chart">
+
+        <h3>Column Chart</h3>
+        <p>Changing the color in a column chart follows a similar process. In the example below, we set custom colors for each column in our chart.</p>
+        <pre>&lt;script type="text/javascript"&gt;
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawStuff);
+
+  function drawStuff() {
+    var data = new google.visualization.arrayToDataTable([
+      ['Galaxy', 'Distance', 'Brightness'],
+      ['Canis Major Dwarf', 8000, 23.3],
+      ['Sagittarius Dwarf', 24000, 4.5],
+      ['Ursa Major II Dwarf', 30000, 14.3],
+      ['Lg. Magellanic Cloud', 50000, 0.9],
+      ['Bootes I', 60000, 13.1]
+    ]);
+
+    var options = {
+      title: 'Galactic Statistics',
+      chart: { title: 'Galaxy Distance vs Brightness' },
+      bars: 'horizontal', // Required for Material Bar Charts.
+      colors: ['#1b9e77', '#d95f02', '#7570b3', '#e7298a', '#66a61e']
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+&lt;/script&gt;
+        </pre>
+        <img src="/images/colorGame/Snipaste_2024-05-14_21-15-25.png" alt="Colorful Column Chart">
+
+        <h2>Final Thoughts</h2>
+        <p>Customizing the colors in your Google Charts is a simple yet effective way to enhance the visual impact of your data presentations. Experiment with different color combinations to find the perfect palette that fits your style and improves readability. Happy charting!</p>
+    </div>
+</div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.meanmenu.min.js"></script>
+    <script src="/js/base.js"></script>
+
+
+
+</body></html>

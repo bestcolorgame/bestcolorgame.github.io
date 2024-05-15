@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title></title>
+<script src="/js/tailwindcss.js"></script>
+<link href="/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/public.css">
+</head>
+<body class="bg-gray-100">
+
+    <header id="baseHeader">
+        <nav>
+            <ul>
+                <li><a href="/index.html" class="a_uni_action_1">Home</a>
+                </li>
+                <li><a href="/colour-prediction-Tricks/html/index1.html" class="a_uni_action_2">Colour Prediction Tricks</a>
+                </li>
+                <li><a href="#" class="a_uni_action_3">Game Help</a></li>
+                <li><a href="#" class="a_uni_action_4">Game Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header bg-gray-800 text-white text-center py-8">
+        <h1 class="text-3xl font-bold">
+             Color Prediction Game
+        </h1>
+        <p class="text-xl">
+            India's most popular color game
+        </p>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl bg-white rounded-lg shadow-md">
+        <div class="share-buttons">
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="0"> Login Or Register </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="1" style="background-color: #c8cb10;"> Customer Service </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="2" style="background-color: #e34a0f;"> Apk Download </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="3" style="background-color: #062def;"> Telegram Channel </button>
+        </div>
+    
+        <div class="chat_gpt_content">
+<div class="container">
+    <h1>How to Make a Colour Prediction Game</h1>
+    <p>Creating a colour prediction game can be a fun and educational experience. This simple game involves guessing or predicting the colour that will appear next based on some set rules or randomly. Here, we'll guide you through the steps to create a basic colour prediction game using HTML, CSS, and JavaScript.</p>
+
+    <h2>1. Setting Up Your Environment</h2>
+    <p>First, create an HTML file and name it index.html. This file will hold the basic structure of your game.</p>
+    
+    <h2>2. HTML Structure</h2>
+    <p>Add the following HTML code to your file:</p>
+<pre><code>&lt;div id="gameContainer"&gt;
+    &lt;button id="startButton"&gt;Start Game&lt;/button&gt;
+    &lt;div id="colorDisplay" style="width: 100px; height: 100px; background-color: #fff; border: 1px solid #000;"&gt;&lt;/div&gt;
+    &lt;p&gt;What will be the next color?&lt;/p&gt;
+    &lt;button onclick="makeGuess('red')"&gt;Red&lt;/button&gt;
+    &lt;button onclick="makeGuess('green')"&gt;Green&lt;/button&gt;
+    &lt;button onclick="makeGuess('blue')"&gt;Blue&lt;/button&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    <h2>3. Adding CSS</h2>
+    <p>Include some basic styling to make your game look better. You can add the following CSS:</p>
+<pre><code>body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#gameContainer {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+#colorDisplay {
+    margin-bottom: 20px;
+}
+</code>
+</pre>
+
+    <h2>4. JavaScript Logic</h2>
+    <p>Add JavaScript to provide the functionality of your game. You should define the behavior for starting the game and making guesses. Add the following script:</p>
+<pre><code>&lt;script&gt;
+    var colors = ['red', 'green', 'blue'];
+    var currentColor;
+
+    function startGame() {
+        currentColor = colors[Math.floor(Math.random() * colors.length)];
+        document.getElementById('colorDisplay').style.backgroundColor = currentColor;
+    }
+
+    function makeGuess(color) {
+        if (color === currentColor) {
+            alert('Correct!');
+        } else {
+            alert('Wrong, please try again!');
+        }
+        startGame();
+    }
+    
+    document.getElementById('startButton').onclick = startGame;
+&lt;/script&gt;
+</code>
+</pre>
+
+    <h2>5. Test Your Game</h2>
+    <p>Save your HTML file and open it in a web browser to see how your color prediction game works. Press the "Start Game" button to begin and then make guesses to see if you can predict the next color accurately.</p>
+
+    <h2>Conclusion</h2>
+    <p>Creating your own color prediction game is not only a great way to learn basic programming concepts but also an excellent tool for mastering HTML, CSS, and JavaScript. Feel free to expand upon this basic version, perhaps by adding more colors or creating a scoring system!</p>
+</div>
+
+</div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.meanmenu.min.js"></script>
+    <script src="/js/base.js"></script>
+
+
+
+</body></html>

@@ -83,4 +83,6 @@ function generateUniqueIdFromUserAgent(userAgent) {
     overlay.style.opacity = isVisible ? '0' : '1';
 }
 
-togglePopup()
+jQuery(document).ready(function () {
+    jQuery('header nav').meanmenu();
+});

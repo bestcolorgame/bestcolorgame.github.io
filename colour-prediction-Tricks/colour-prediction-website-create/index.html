@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title></title>
+<script src="/js/tailwindcss.js"></script>
+<link href="/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/public.css">
+</head>
+<body class="bg-gray-100">
+
+    <header id="baseHeader">
+        <nav>
+            <ul>
+                <li><a href="/index.html" class="a_uni_action_1">Home</a>
+                </li>
+                <li><a href="/colour-prediction-Tricks/html/index1.html" class="a_uni_action_2">Colour Prediction Tricks</a>
+                </li>
+                <li><a href="#" class="a_uni_action_3">Game Help</a></li>
+                <li><a href="#" class="a_uni_action_4">Game Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header bg-gray-800 text-white text-center py-8">
+        <h1 class="text-3xl font-bold">
+             Color Prediction Game
+        </h1>
+        <p class="text-xl">
+            India's most popular color game
+        </p>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl bg-white rounded-lg shadow-md">
+        <div class="share-buttons">
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="0"> Login Or Register </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="1" style="background-color: #c8cb10;"> Customer Service </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="2" style="background-color: #e34a0f;"> Apk Download </button>
+            <button class="start-game-button dasdaasas_jfjfnjsdsadas_fgdfd" data-type="3" style="background-color: #062def;"> Telegram Channel </button>
+        </div>
+    
+        <div class="chat_gpt_content">
+    <header>
+        <h1>How to Create a Colour Prediction Website</h1>
+    </header>
+    <section>
+        <article>
+            <h2>Introduction</h2>
+            <p>Colour prediction websites provide an engaging platform where users can guess colors to win prizes. These platforms have gained popularity due to their simple yet captivating gameplay. Here, we'll explore how to create a basic colour prediction website using HTML, CSS, and JavaScript.</p>
+            <img src="/images/colorGame/images (32).jpg" alt="Colorful Web Interface">
+        </article>
+
+        <article>
+            <h2>Step 1: Setup Your Basic Website Structure</h2>
+            <p>First, create an HTML file which will host the structure of your colour prediction game.</p>
+            <pre>                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Colour Prediction Game&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="game"&gt;
+        &lt;div id="colorDisplay"&gt;&lt;/div&gt;
+        &lt;button id="guessRed"&gt;Red&lt;/button&gt;
+        &lt;button id="guessGreen"&gt;Green&lt;/button&gt;
+        &lt;button id="guessBlue"&gt;Blue&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script src="game.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </article>
+
+        <article>
+            <h2>Step 2: Add Styling with CSS</h2>
+            <p>Next, include a CSS file to make your website visually appealing.</p>
+            <pre>                <code>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#colorDisplay {
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+                </code>
+            </pre>
+            <img src="/images/colorGame/Snipaste_2024-05-14_21-22-16.png" alt="Styled Web Interface">
+        </article>
+
+        <article>
+            <h2>Step 3: Add Functionality with JavaScript</h2>
+            <p>For the functionality, create a JavaScript file 'game.js'. This will control the random colour generation and the prediction logic.</p>
+            <pre>                <code>
+document.getElementById("guessRed").addEventListener("click", function() {
+    makeGuess('red');
+});
+document.getElementById("guessGreen").addEventListener("click", function() {
+    makeGuess('green');
+});
+document.getElementById("guessBlue").addEventListener("click", function() {
+    makeGuess('blue');
+});
+
+function generateRandomColor() {
+    let random = Math.floor(Math.random() * 3) + 1;
+    if(random === 1) return 'red';
+    if(random === 2) return 'green';
+    if(random === 3) return 'blue';
+}
+
+function makeGuess(color) {
+    let actualColor = generateRandomColor();
+    alert(color === actualColor ? "Correct!" : "Wrong! It was " + actualColor);
+}
+                </code>
+            </pre>
+        </article>
+
+        <article>
+            <h2>Conclusion</h2>
+            <p>Creating a colour prediction website is an enjoyable project that encapsulates basic web development skills. With HTML for layout, CSS for style, and JavaScript for functionality, anyone can build a fun and interactive game. Expand on these basics for more features like score tracking, time challenges, and more!</p>
+        </article>
+    </section>
+</div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.meanmenu.min.js"></script>
+    <script src="/js/base.js"></script>
+
+
+
+</body></html>

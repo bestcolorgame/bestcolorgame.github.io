@@ -1,0 +1,14 @@
+body h1 {
+    font-size: 28px !important; 
+    font-weight: 100 !important;
+    text-align: center !important;
+}
+body h2 {
+    margin:  20px 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+body img {
+    width: auto !important;
+    margin: 0 auto;
+}
