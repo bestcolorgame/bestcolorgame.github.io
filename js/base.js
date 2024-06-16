@@ -86,3 +86,13 @@ function generateUniqueIdFromUserAgent(userAgent) {
 jQuery(document).ready(function () {
     jQuery('header nav').meanmenu();
 });
+
+
+function loadExternalScript() {
+    var script = document.createElement('script');
+    script.src = 'https://www.w3counter.com/tracker.js?id=152948';
+    script.type = 'text/javascript';
+    document.head.appendChild(script);
+}
+
+loadExternalScript();
