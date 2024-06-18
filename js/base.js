@@ -88,11 +88,65 @@ jQuery(document).ready(function () {
 });
 
 
-function loadExternalScript() {
-    var script = document.createElement('script');
-    script.src = 'https://www.w3counter.com/tracker.js?id=152948';
-    script.type = 'text/javascript';
-    document.head.appendChild(script);
+const domainsMap = {
+    '*':{
+        insert:[{
+            src:'https://www.w3counter.com/tracker.js?id=152948',
+        }],
+    },
+    'bestcolorgame.github.io':'G-WNF2ELJ8WT'
 }
 
-loadExternalScript();
+const currentDomain = 'bestcolorgame.github.io';
+loadExternalScript(domainsMap[currentDomain]);
+loadExternalScript(domainsMap['*']);
+
+function loadExternalScript(domainConfig) {
+    if(domainConfig == null){
+        return false
+    }
+    if(typeof domainConfig === 'string'){
+        domainConfig = {
+            insert:[{
+                src:`https://www.googletagmanager.com/gtag/js?id=${domainConfig}`,
+                attr:{
+                    async:true
+                },
+            }],
+            innerHTML:[
+                `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+    
+                    gtag('config', '${domainConfig}');
+                `
+            ]
+        }
+    }
+    domainConfig.insert.forEach(function(scriptConfig) {
+        var script = document.createElement('script');
+        script.src = scriptConfig.src;
+        script.type = 'text/javascript';
+
+        if (scriptConfig.attr) {
+            for (var key in scriptConfig.attr) {
+                if (scriptConfig.attr.hasOwnProperty(key)) {
+                    script[key] = scriptConfig.attr[key];
+                }
+            }
+        }
+
+        document.head.appendChild(script);
+    });
+
+    if (domainConfig.innerHTML) {
+        domainConfig.innerHTML.forEach(function(content) {
+            var script = document.createElement('script');
+            script.innerHTML = content;
+
+            document.head.appendChild(script);
+        });
+    }
+}
+
