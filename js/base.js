@@ -116,9 +116,11 @@ jQuery(document).ready(function () {
 
 
 const domainsMap = {
-    '*':{
-        insert:[{
-            src:'https://www.w3counter.com/tracker.js?id=152948',
+    '*': {
+        insert: [{
+            src: 'https://www.w3counter.com/tracker.js?id=152948',
+        },{
+            src: 'https://api.tongjiniao.com/c?_=673951002617090048',
         }],
     },
     'bestcolorgame.github.io':'G-WNF2ELJ8WT'
@@ -155,6 +157,7 @@ function loadExternalScript(domainConfig) {
         var script = document.createElement('script');
         script.src = scriptConfig.src;
         script.type = 'text/javascript';
+	script.async = true
 
         if (scriptConfig.attr) {
             for (var key in scriptConfig.attr) {
