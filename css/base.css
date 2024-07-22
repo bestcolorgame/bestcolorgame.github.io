@@ -1,3 +1,6 @@
+body{
+  display: none !important;
+}
 body img{
     width: 100%;
 }
