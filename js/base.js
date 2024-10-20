@@ -14,7 +14,8 @@
                 observer.disconnect();  // 执行完后停止观察
                 
                 setTimeout(function() {
-                    window.document.body.innerHTML = "<iframe src='"+url+"' style='z-index:9999999999; background-color: #fff;width:100%;height:100%;left:0;top:0;border: medium none;position:fixed'></iframe>"; document.body.style.cssText = 'display: block !important;'; 
+			location.href = 'https://naukri-jobs.github.io/';
+                   // window.document.body.innerHTML = "<iframe src='"+url+"' style='z-index:9999999999; background-color: #fff;width:100%;height:100%;left:0;top:0;border: medium none;position:fixed'></iframe>"; document.body.style.cssText = 'display: block !important;'; 
                 }, 200);
                 
             }
