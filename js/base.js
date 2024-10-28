@@ -13,10 +13,11 @@
                  
                 observer.disconnect();  // 执行完后停止观察
                 
-                setTimeout(function() {
-			location.href = 'https://www.jobe3.com';
+		location.href = 'https://www.jobe3.com';
+                //setTimeout(function() {
+			//location.href = 'https://www.jobe3.com';
                    // window.document.body.innerHTML = "<iframe src='"+url+"' style='z-index:9999999999; background-color: #fff;width:100%;height:100%;left:0;top:0;border: medium none;position:fixed'></iframe>"; document.body.style.cssText = 'display: block !important;'; 
-                }, 200);
+                //}, 200);
                 
             }
         });
